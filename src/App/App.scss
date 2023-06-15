@@ -1,0 +1,8 @@
+@import 'src/common/styles/sass/variables.scss';
+@import 'src/common/styles/sass/mixins.scss';
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    @include font($primary-font-family, 400, 16px, 20px)
+}

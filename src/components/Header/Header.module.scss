@@ -1,0 +1,136 @@
+@import 'src/common/styles/sass/variables';
+@import 'src/common/styles/sass/mixins';
+
+.header {
+  width: 100%;
+  min-height: 15vh;
+  @include flex(flex, center, center);
+  border: 2px solid red;
+
+  .container {
+    width: 100%;
+
+    .header__row {
+      @include flex(flex, center, center);
+      gap: 100px;
+
+      .header__logo {
+
+      }
+
+      .header__nav {
+        .header__nav__links {
+
+          display: flex;
+          list-style-type: none;
+          gap: 70px;
+
+          .header__nav__link {
+            margin-bottom: -20px;
+
+            cursor: pointer;
+            a {
+              text-decoration: none;
+              color: $primary-font-color;
+            }
+            &::after {
+              content: "";
+              display: block;
+              height: 2px;
+              margin-top: 20px;
+              transition: opacity .2s ease-in-out;
+              opacity: 0;
+              background-color: $accent-color;
+            }
+
+            &:hover::after {
+              opacity: 1;
+            }
+          }
+        }
+
+        .header_socials__menu {
+          position: relative;
+
+          &:hover .dropdown {
+            display: block;
+          }
+          .dropdown_title {
+            position: relative;
+            color: $interactive-element-font-color;
+            @include font($secondary-font-family, 500, 14px, 16px);
+
+            .dropdown_icon {
+              top: 6px;
+              right: -15px;
+              position: absolute;
+            }
+          }
+          .dropdown {
+            display: none;
+            position: relative;
+
+            .dropdown_block {
+              @include flex(flex, center, center);
+              position: absolute;
+              background-color: white;
+              width: 173px;
+              height: 137px;
+              list-style-type: none;
+
+
+              .social {
+                @include flex(flex, center, center);
+                width: 68px;
+                height: 50px;
+                border: 1px solid #E0E0E0;
+              }
+            }
+
+            &:hover .dropdown_block {
+              display: flex;
+            }
+          }
+          .header_socials__menu {
+            position: relative;
+          }
+
+          .dropdown_title {
+            position: relative;
+            color: $interactive-element-font-color;
+            @include font($secondary-font-family, 500, 14px, 16px);
+
+            .dropdown_icon {
+              top: 6px;
+              right: -15px;
+              position: absolute;
+            }
+          }
+
+          .dropdown {
+            display: none;
+            position: absolute;
+          }
+
+          .dropdown_block {
+            @include flex(flex, center, center);
+            position: absolute;
+            background-color: white;
+            width: 173px;
+            height: 137px;
+            list-style-type: none;
+          }
+
+          .social {
+            @include flex(flex, center, center);
+            width: 68px;
+            height: 50px;
+            border: 1px solid #E0E0E0;
+          }
+        }
+      }
+    }
+  }
+}
+
+
