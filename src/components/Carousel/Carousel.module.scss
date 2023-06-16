@@ -1,2 +1,43 @@
 @import 'src/common/styles/sass/variables';
 @import 'src/common/styles/sass/mixins';
+
+.carousel {
+  width: 100%;
+  position: relative;
+  min-height: 45vh;
+
+  .container {
+    width: 100%;
+    min-height: 45vh;
+    background: $primary-color;
+    display: flex;
+    justify-content: flex-end;
+    position: relative;
+    .carousel_background__image__building {
+      clip-path: polygon(35% 0%, 100% 0%, 100% 50%, 100% 100%, 35% 100%, 50% 50%);
+    }
+    .carousel_background__image__women {
+      position: absolute;
+      bottom: 0;
+      width: 600px;
+      left: 51%;
+      overflow: auto;
+    }
+  }
+
+  .section {
+    position: absolute;
+    top: 20%;
+    left: 22%;
+
+    max-width: 600px;
+    z-index: 1;
+    @include flex(flex, flex-start, flex-start, column);
+    gap: 40px;
+
+    .carousel__title {
+      @include font($secondary-font-family, 700, 36px, 42px, $secondary-font-color);
+    }
+  }
+}
+

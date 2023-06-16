@@ -2,10 +2,12 @@ import React from 'react';
 import s from './Header.module.scss'
 import LOGO from './../../assets/svg/logo.svg'
 import DROPDOWN from './../../assets/svg/dropdown.svg'
-import VK from './../../assets/svg/socials/vk.svg'
+// import VK from './../../assets/svg/socials/vk.svg'
+import { ReactComponent as Vk } from './../../assets/svg/socials/vk.svg'
 import INST from './../../assets/svg/socials/inst.svg'
 import FB from './../../assets/svg/socials/fb.svg'
 import OK from './../../assets/svg/socials/ondoklass.svg'
+
 
 export const Header = () => {
     return (
@@ -55,24 +57,24 @@ export const Header = () => {
                                             <div>
                                             <li className={s.social}>
                                                 <a href={"/"}>
-                                                    <img src={VK} alt={""} className={s.icon} />
+                                                   <Vk/>
                                                 </a>
                                             </li>
                                             <li className={s.social}>
                                                 <a href={"/"}>
-                                                    <img src={OK} alt={""} className={s.icon}/>
+                                                    <img src={OK} alt={""} className={s.dropdown_icon}/>
                                                 </a>
                                             </li>
                                             </div>
                                             <div>
                                             <li className={s.social}>
                                                 <a href={"/"}>
-                                                    <img src={FB} alt={""} className={`${s.icon}  ${s.icon__fb}`}/>
+                                                    <img src={FB} alt={""} className={s.dropdown_icon}/>
                                                 </a>
                                             </li>
                                             <li className={s.social}>
                                                 <a href={"/"}>
-                                                    <img src={INST} alt={""} className={`${s.icon}  ${s.icon__inst}`}/>
+                                                    <img src={INST} alt={""} className={s.dropdown_icon}/>
                                                 </a>
                                             </li>
                                             </div>

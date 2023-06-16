@@ -5,7 +5,7 @@
   width: 100%;
   min-height: 15vh;
   @include flex(flex, center, center);
-  border: 2px solid red;
+
 
   .container {
     width: 100%;
@@ -54,11 +54,13 @@
 
           &:hover .dropdown {
             display: block;
+            z-index: 10
+          ;
           }
           .dropdown_title {
             position: relative;
             color: $interactive-element-font-color;
-            @include font($secondary-font-family, 500, 14px, 16px);
+            @include font($interactive-element-font-family, 500, 14px, 16px);
 
             .dropdown_icon {
               top: 6px;
@@ -100,11 +102,7 @@
             color: $interactive-element-font-color;
             @include font($secondary-font-family, 500, 14px, 16px);
 
-            .dropdown_icon {
-              top: 6px;
-              right: -15px;
-              position: absolute;
-            }
+
           }
 
           .dropdown {
@@ -126,11 +124,13 @@
             width: 68px;
             height: 50px;
             border: 1px solid #E0E0E0;
+            &:hover .dropdown_icon {
+              fill: #003264;
+            }
           }
         }
       }
     }
   }
 }
-
 

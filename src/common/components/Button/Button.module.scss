@@ -1,0 +1,38 @@
+@import 'src/common/styles/sass/variables';
+@import 'src/common/styles/sass/mixins';
+
+
+.btn {
+  background-color: $accent-color;
+  @include flex(flex, center, center);
+  padding: 20px 35px;
+  border: 0;
+  cursor: pointer;
+  transition: background-color .3s ease;
+  overflow: hidden;
+  position: relative;
+  span {
+    @include font($primary-font-family, 700, 16px, 19px, $secondary-font-color);
+    z-index: 5;
+  }
+  &:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 200%;
+    height: 100%;
+    background: linear-gradient(to right, #DC6D08 0%,#DC6D08 50%,$accent-color 50%, $accent-color 100%);
+    transition: left .3s;
+
+  }
+  &:hover:before{
+    left: 0;
+
+  }
+}
+
+
+
+
+
