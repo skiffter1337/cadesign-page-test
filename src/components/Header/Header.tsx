@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useEffect, useState} from 'react';
 import s from './Header.module.scss'
 import LOGO from './../../assets/svg/logo.svg'
 import DROPDOWN from './../../assets/svg/dropdown.svg'
@@ -7,9 +7,26 @@ import { ReactComponent as Vk } from './../../assets/svg/socials/vk.svg'
 import INST from './../../assets/svg/socials/inst.svg'
 import FB from './../../assets/svg/socials/fb.svg'
 import OK from './../../assets/svg/socials/ondoklass.svg'
+import {Burger} from "./Burger/Burger";
 
 
 export const Header = () => {
+
+    const useWindowSize = () => {
+
+        const [windowSize, setWindowSize] = useState(0);
+
+        useEffect(() => {
+            const handleResize = () => setWindowSize(window.innerWidth)
+
+            window.addEventListener("resize", handleResize);
+            handleResize();
+            return () => window.removeEventListener("resize", handleResize);
+        }, []);
+        return windowSize;
+    }
+
+    const size = useWindowSize()
     return (
         <header className={s.header}>
             <div className={s.container}>
@@ -18,7 +35,8 @@ export const Header = () => {
                     <div className={s.header__logo}>
                         <img src={LOGO} alt={'logo'}/>
                     </div>
-
+                    {size < 1250 ? <Burger/>
+                        :
                     <div className={s.header__nav}>
                         <ul className={s.header__nav__links}>
                             <li className={s.header__nav__link}>
@@ -84,7 +102,7 @@ export const Header = () => {
                             </li>
                         </ul>
                     </div>
-
+                    }
                 </div>
             </div>
         </header>

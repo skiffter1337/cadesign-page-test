@@ -8,12 +8,19 @@
 
 
   .container {
+    @include flex(flex, center, center);
     width: 100%;
 
     .header__row {
+      border: 2px solid red;
       @include flex(flex, center, center);
       gap: 100px;
-
+      @media screen and (max-width: 1230px) {
+        @include flex(flex, space-between, center);
+        width: 100%;
+        margin-right: 40px;
+        margin-left: 40px;
+      }
       .header__logo {
 
       }
