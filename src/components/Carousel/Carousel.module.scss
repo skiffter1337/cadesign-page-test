@@ -2,42 +2,106 @@
 @import 'src/common/styles/sass/mixins';
 
 .carousel {
+  overflow: hidden;
   width: 100%;
   position: relative;
   min-height: 45vh;
-
+  @media screen and (max-width: 750px) {
+    min-height: 35vh;
+  }
   .container {
-    width: 100%;
-    min-height: 45vh;
-    background: $primary-color;
-    display: flex;
-    justify-content: flex-end;
-    position: relative;
     .carousel_background__image__building {
-      clip-path: polygon(35% 0%, 100% 0%, 100% 50%, 100% 100%, 35% 100%, 50% 50%);
+
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: center center;
+      clip-path: polygon(40% 0%, 100% 0%, 100% 50%, 100% 100%, 40% 100%, 50% 50%);
+      @media screen and (max-width: 1350px) {
+        clip-path: polygon(55% 0%, 100% 0%, 100% 50%, 100% 100%, 65% 100%, 85% 50%);
+      }
+      @media screen and (max-width: 950px) {
+        clip-path: polygon(75% 0%, 100% 0%, 100% 50%, 100% 100%, 75% 100%, 85% 50%);
+      }
+      @media screen and (max-width: 750px) {
+        display: none;
+      }
     }
+
     .carousel_background__image__women {
+
       position: absolute;
       bottom: 0;
       width: 600px;
       left: 51%;
-      overflow: auto;
+
+      @media screen and (max-width: 1350px) {
+        right: -10%;
+        left: auto;
+        @media screen and (max-width: 950px) {
+          width: 500px;
+        }
+        @media screen and (max-width: 750px) {
+          width: 320px;
+          left: 50%;
+          transform: translateX(-50%);
+        }
+      }
     }
   }
 
   .section {
+
     position: absolute;
     top: 20%;
     left: 22%;
 
-    max-width: 600px;
+    max-width: 500px;
     z-index: 1;
     @include flex(flex, flex-start, flex-start, column);
     gap: 40px;
+    @media screen and (max-width: 1350px) {
+      left: 12%;
+    }
+    @media screen and (max-width: 950px) {
+      top: 30%;
+      left: 5%;
+    }
+    @media screen and (max-width: 750px) {
+      min-width: 350px;
+      top: 10%;
+      gap: 120px;
+      @include flex(flex, center, center, column);
+
+      left: 50%;
+      transform: translateX(-50%);
+    }
 
     .carousel__title {
       @include font($secondary-font-family, 700, 36px, 42px, $secondary-font-color);
+      @media screen and (max-width: 950px) {
+        font-size: 30px;
+        line-height: 35px
+
+      }
+      @media screen and (max-width: 750px) {
+        text-align: center;
+        font-size: 22px;
+        line-height: 26px
+
+      }
     }
   }
 }
 
+
+.carousel_background__block {
+  width: 100%;
+  min-height: 45vh;
+  background: #003264;
+  display: flex;
+  justify-content: flex-end;
+  position: relative;
+  @media screen and (max-width: 750px) {
+    min-height: 35vh;
+  }
+}

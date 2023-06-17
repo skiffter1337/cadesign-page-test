@@ -2,7 +2,7 @@
   "name": "my-app",
   "version": "0.1.0",
   "private": true,
-  "homepage" : "https://skiffter1337.github.io/cadesign-page-test",
+  "homepage": "https://skiffter1337.github.io/cadesign-page-test",
   "dependencies": {
     "@testing-library/jest-dom": "^5.14.1",
     "@testing-library/react": "^13.0.0",
@@ -15,7 +15,9 @@
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-scripts": "5.0.1",
+    "react-slick": "^0.29.0",
     "sass": "^1.63.4",
+    "slick-carousel": "^1.8.1",
     "typescript": "^4.4.2",
     "web-vitals": "^2.1.0"
   },

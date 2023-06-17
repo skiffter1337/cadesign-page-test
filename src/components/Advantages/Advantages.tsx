@@ -7,6 +7,7 @@ import DYNAMICS from './../../assets/svg/advantages/dynamicsDark.svg'
 import RELIABILITY from './../../assets/svg/advantages/reliability.svg'
 import RESPONSIBILITY from './../../assets/svg/advantages/responsibility.svg'
 
+
 export const Advantages = () => {
     return (
         <div className={s.advantages}>

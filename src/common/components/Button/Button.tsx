@@ -3,11 +3,15 @@ import s from './Button.module.scss'
 
 type PropsType = {
     title: string
+    callback?: () => void
 }
-export const Button: React.FC<PropsType> = ({title}) => {
+export const Button: React.FC<PropsType> = ({title, callback}) => {
+
+    const onClickHandler = () => callback!()
+
     return (
         <>
-        <button className={s.btn}><span>{title}</span></button>
+        <button className={s.btn} onClick={onClickHandler}><span>{title}</span></button>
         </>
     );
 };

@@ -5,14 +5,15 @@
   width: 100%;
   min-height: 15vh;
   @include flex(flex, center, center);
-
+  @media screen and (max-width: 1230px) {
+    min-height: 10vh;
+  }
 
   .container {
     @include flex(flex, center, center);
     width: 100%;
 
     .header__row {
-      border: 2px solid red;
       @include flex(flex, center, center);
       gap: 100px;
       @media screen and (max-width: 1230px) {

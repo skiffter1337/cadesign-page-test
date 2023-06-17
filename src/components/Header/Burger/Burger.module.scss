@@ -2,55 +2,91 @@
 @import 'src/common/styles/sass/mixins';
 
 .burger_icon {
-    display: inline-block;
 
-    .btn {
-        background-color: transparent;
-        border: none;
-        color: blue;
-    }
+  .btn {
+    display: flex;
+    background-color: transparent;
+    border: none;
+    z-index: 6;
+    position: absolute;
+    right: 40px;
+    top: 30px;
+  }
 }
 
 .burger_menu_content {
-    top: 80px;
-    display: flex;
-    justify-content: center;
-    background-color: $primary-color;
-    text-align: center;
-    position: absolute;
-    width: 100%;
+  z-index: 5;
+  top: 0;
+  right: 0;
+  left: 0;
+
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  background-color: $primary-font-color;
+  text-align: center;
+  position: absolute;
+  width: 100%;
+  min-height: 65vh;
+  opacity: 0;
+  overflow: hidden;
 
 
-    opacity: 0;
-    max-height: 0;
-    overflow: hidden;
-    transition: max-height 0.35s ease, opacity 0.35s ease;
+  .burger_links__container {
+    gap: 20px;
+    list-style-type: none;
+    height: 400px;
+    font-size: 18px;
 
-    .burger_list {
-        @include flex(flex, center, center, column);
-        gap: 20px;
-        list-style-type: none;
-        height: 400px;
-        font-size: 18px;
-
-        a {
-            cursor: pointer;
-
-            .active {
-                color: $primary-color;
-            }
-
-            &:hover {
-                color: $primary-color;
-            }
+    .burger_links__list {
+      margin-left: 50px;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 40px;
+      justify-content: flex-start;
+      list-style-type: none;
+      position: relative;
+      li {
+        @include font($secondary-font-family, 400, 16px, 19px);
+        color: #FFFFFF;
+        &:hover {
+          color: #E9862A;
+          font-weight: 700;
         }
+      }
     }
+  }
+
+  .dropdown_block {
+
+    @include flex(flex, center, flex-end);
+    height: 137px;
+    list-style-type: none;
+    gap: 20px;
+  }
+
+  .social {
+    @include flex(flex, center, center);
+    width: 68px;
+    height: 50px;
+    border: 1px solid rgba(255, 255, 255, 0.08);;
+    &:hover {
+      border: 1px solid #E0E0E0;;
+    }
+    @media screen and (max-width: 750px) {
+      width: 58px;
+      height: 40px;
+    }
+  }
 }
 
 .burger_show {
-    opacity: 1;
-    max-height: 400px;
+  opacity: 1;
+  max-height: 400px;
 }
+
+
 
 
 

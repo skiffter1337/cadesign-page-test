@@ -21,7 +21,7 @@
         border: 1px solid #EDEDED;
         @include flex(flex, center, center, column);
         flex-basis: calc(33.33% - 40px);
-        max-width: calc(33.33% - 40px);
+        width: calc(33.33% - 40px);
 
         height: 300px;
         padding: 50px;
