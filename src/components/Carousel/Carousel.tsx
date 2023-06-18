@@ -13,7 +13,6 @@ export const Carousel = () => {
     const handleOpenModal = () => setModalOpen(true);
     const handleCloseModal = () => setModalOpen(false);
 
-
     return (
         <>
             <div className={s.carousel}>

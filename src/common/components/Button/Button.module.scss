@@ -3,7 +3,7 @@
 
 
 .btn {
-  background-color: $accent-color;
+  background-color: $accent__color;
   @include flex(flex, center, center);
   padding: 20px 35px;
   border: 0;
@@ -13,11 +13,11 @@
   position: relative;
 
   &:disabled {
-    background-color: #C3C8C8;
+    background-color: $background__color;
   }
 
   span {
-    @include font($primary-font-family, 700, 16px, 19px, $secondary-font-color);
+    @include font($primary__font__family, 700, 16px, 19px, $secondary__font__color);
     z-index: 5;
   }
 
@@ -28,12 +28,12 @@
     left: -100%;
     width: 200%;
     height: 100%;
-    background: linear-gradient(to right, #DC6D08 0%, #DC6D08 50%, $accent-color 50%, $accent-color 100%);
+    background: linear-gradient(to right, #DC6D08 0%, #DC6D08 50%, $accent__color 50%, $accent__color 100%);
     transition: left .3s;
   }
 
   &:disabled:before {
-    background: #C3C8C8;
+    background: $background__color;
   }
 
   &:hover:before {

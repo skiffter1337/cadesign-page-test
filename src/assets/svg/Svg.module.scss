@@ -1,0 +1,45 @@
+@import 'src/common/styles/sass/variables';
+@import 'src/common/styles/sass/mixins';
+
+.vk__icon {
+  width: 21px;
+  height: 12px;
+  fill: $accent__color;
+}
+
+.fb__icon {
+  width: 10px;
+  height: 17px;
+  fill: $accent__color;
+}
+
+.ok__icon {
+  width: 11px;
+  height: 18px;
+  fill: $accent__color;
+}
+
+.inst__icon {
+  width: 16px;
+  height: 17px;
+  fill: $accent__color;
+}
+
+.burger__icon {
+  width: 28px;
+  height: 18px;
+}
+.burger__close__icon {
+  width: 18px;
+  height: 18px;
+}
+
+.trash__icon {
+  width: 10px;
+  height: 11px;
+}
+.checkbox__icon {
+  width: 12px;
+  height: 10px;
+}
+

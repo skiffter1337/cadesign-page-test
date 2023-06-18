@@ -11,7 +11,6 @@
   }
   .container {
     .carousel_background__image__building {
-
       background-size: cover;
       background-repeat: no-repeat;
       background-position: center center;
@@ -28,7 +27,6 @@
     }
 
     .carousel_background__image__women {
-
       position: absolute;
       bottom: 0;
       width: 600px;
@@ -50,7 +48,6 @@
   }
 
   .section {
-
     position: absolute;
     top: 20%;
     left: 22%;
@@ -77,7 +74,7 @@
     }
 
     .carousel__title {
-      @include font($secondary-font-family, 700, 36px, 42px, $secondary-font-color);
+      @include font($secondary__font__family, 700, 36px, 42px, $secondary__font__color);
       @media screen and (max-width: 950px) {
         font-size: 30px;
         line-height: 35px
@@ -90,18 +87,20 @@
 
       }
     }
+
   }
+  .carousel_background__block {
+    width: 100%;
+    min-height: 45vh;
+    background: $primary__color;
+    display: flex;
+    justify-content: flex-end;
+    position: relative;
+    @media screen and (max-width: 750px) {
+      min-height: 35vh;
+    }
+  }
+
 }
 
 
-.carousel_background__block {
-  width: 100%;
-  min-height: 45vh;
-  background: #003264;
-  display: flex;
-  justify-content: flex-end;
-  position: relative;
-  @media screen and (max-width: 750px) {
-    min-height: 35vh;
-  }
-}

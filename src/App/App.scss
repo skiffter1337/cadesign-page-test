@@ -4,5 +4,5 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    @include font($primary-font-family, 400, 16px, 20px)
+    @include font($primary__font__family, 400, 16px, 20px)
 }

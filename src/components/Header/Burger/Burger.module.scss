@@ -19,11 +19,10 @@
   top: 0;
   right: 0;
   left: 0;
-
   display: flex;
   justify-content: center;
   flex-direction: column;
-  background-color: $primary-font-color;
+  background-color: $primary__font__color;
   text-align: center;
   position: absolute;
   width: 100%;
@@ -39,19 +38,15 @@
     font-size: 18px;
 
     .burger_links__list {
-      margin-left: 50px;
-      display: flex;
-      flex-direction: column;
-      align-items: flex-start;
+      @include flex(flex, flex-start, flex-start, column);
       gap: 40px;
-      justify-content: flex-start;
+      margin-left: 50px;
       list-style-type: none;
       position: relative;
       li {
-        @include font($secondary-font-family, 400, 16px, 19px);
-        color: #FFFFFF;
+        @include font($secondary__font__family, 400, 16px, 19px, $burger__menu__font__color);
         &:hover {
-          color: #E9862A;
+          color: $accent__color;
           font-weight: 700;
         }
       }
@@ -72,7 +67,7 @@
     height: 50px;
     border: 1px solid rgba(255, 255, 255, 0.08);;
     &:hover {
-      border: 1px solid #E0E0E0;;
+      border: 1px solid $header_socials__border__color;;
     }
     @media screen and (max-width: 750px) {
       width: 58px;
@@ -85,8 +80,6 @@
   opacity: 1;
   max-height: 400px;
 }
-
-
 
 
 
