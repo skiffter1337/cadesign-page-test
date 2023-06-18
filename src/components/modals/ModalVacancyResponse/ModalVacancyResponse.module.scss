@@ -68,11 +68,6 @@
   width: 100%;
   margin-bottom: 30px;
 
-  textarea {
-    padding: 70px;
-    overflow: hidden;
-    resize: none;
-  }
   .form__input {
     background-color: #f2f2f2;
     color: #242627;
@@ -84,6 +79,12 @@
     &:focus {
       background-color: #fff;
     }
+
+  }
+  .form__textarea {
+    padding: 70px;
+    overflow: hidden;
+    resize: none;
   }
   .input__success__icon {
     position: absolute;
@@ -153,9 +154,6 @@
 }
 
 
-
-
-
 .form__condition > span:last-child {
   margin-left: 5px;
 }
@@ -163,11 +161,6 @@
 .form__field:hover input::placeholder {
   opacity: 1;
 }
-
-
-
-
-
 
 .input__error {
   border: 1px solid #BF1E2E;

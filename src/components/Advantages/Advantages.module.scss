@@ -29,7 +29,6 @@
         box-sizing: border-box;
         position: relative;
         transition: transform 0.5s ease;
-
         &:hover {
           -webkit-box-shadow: 0 0 20px 3px rgba(34, 60, 80, 0.2);
           -moz-box-shadow: 0 0 20px 3px rgba(34, 60, 80, 0.2);
@@ -42,6 +41,19 @@
 
         .advantages_list__item__content {
           @include flex(flex, center, center, column);
+          .advantages__icon {
+            display: block;
+            fill: #4F4F4F;
+            transition: fill 0.5s ease;
+            &:hover {
+              fill: $accent-color;
+
+            }
+          }
+          &:hover .dynamics__icon {
+            stroke: $accent-color;
+          }
+
 
           gap: 30px;
           transition: transform 0.5s ease;
@@ -70,7 +82,29 @@
   }
 }
 
+.development__icon {
+  height: 62px;
+  width: 66px;
+}
+.education__icon {
+  height: 74px;
+  width: 74px;
+}
 
-
-
-
+.responsibility__icon {
+  height: 67px;
+  width: 68px;
+}
+.dynamics__icon {
+  height: 59px;
+  width: 95px;
+  stroke: #4F4F4F;
+}
+.comfort__icon {
+  height: 72px;
+  width: 72px;
+}
+.reliability__icon {
+  height: 69px;
+  width: 54px;
+}

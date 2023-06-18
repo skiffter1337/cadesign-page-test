@@ -141,7 +141,7 @@ export const ModalVacancyResponse: React.FC<PropsType> = ({isOpen, onClose}) => 
                             </div>
                         </div>
                         <div className={s.form__field}>
-                            <textarea className={s.form__input}/>
+                            <textarea className={`${s.form__input} ${s.form__textarea}`}/>
                             <label className={s.input__label}>Комментарий</label>
                         </div>
                         <div className={s.form__submit__block}>
@@ -155,7 +155,7 @@ export const ModalVacancyResponse: React.FC<PropsType> = ({isOpen, onClose}) => 
                                     </span>
                                 </span>
                             </div>
-                            <Button title={'Отправить'} isDisabled={true}/>
+                            <Button title={'Отправить'} isDisabled={inputValue.length === 0}/>
                         </div>
                     </form>
                 </div>
