@@ -1,0 +1,75 @@
+@import 'src/common/styles/sass/variables';
+@import 'src/common/styles/sass/mixins';
+
+.modal {
+  @include flex(flex, center, center);
+
+  overflow: auto;
+  height: 100vh;
+  width: 100vw;
+  background-color: rgba(0, 0, 0, 0.4);
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 30;
+
+  .modal__container {
+    @include flex(flex, flex-start, flex-start, column);
+    gap: 60px;
+    position: relative;
+    margin-top: 700px;
+    margin-bottom: 100px;
+    min-width: 1200px;
+    padding: 70px;
+    background-color: white;
+
+    .modal__close {
+      position: absolute;
+      top: 0;
+      right: -81px;
+    }
+
+    .modal__header {
+      @include flex(flex, flex-start, flex-start, column);
+      gap: 30px;
+
+      .modal__title {
+        @include font($secondary-font-family, 700, 36px, 42px)
+      }
+
+      span {
+        @include font($primary-font-family, 400, 18px, 22px);
+        text-align: center;
+        padding-left: 10px;
+      }
+
+    }
+    .vacancy__list__block {
+      @include flex(flex, flex-start, flex-start, column);
+      gap: 20px;
+      .vacancy__list__title {
+        @include font($primary-font-family, 400, 24px, 24px);
+      }
+      .vacancy__list {
+        padding-left: 15px;
+        list-style-type: square;
+       li {
+         @include font($primary-font-family, 400, 16px, 48px);
+       }
+        .vacancy__salary {
+          padding: 5px;
+          background: rgba(233, 134, 42, 0.17);
+        }
+      }
+    }
+    .vacancy__footer {
+      @include flex(flex, flex-start, flex-start, column);
+      gap: 50px;
+      .vacancy__footer__title {
+        @include font($primary-font-family, 400, 16px, 24px, #828282);
+        padding-left: 10px;
+      }
+    }
+  }
+}
+

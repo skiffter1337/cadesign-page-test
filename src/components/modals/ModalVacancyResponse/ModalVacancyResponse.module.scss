@@ -2,8 +2,8 @@
 @import 'src/common/styles/sass/mixins';
 
 .modal {
+  @include flex(flex, center, center);
   overflow: auto;
-
   height: 100vh;
   width: 100vw;
   background-color: rgba(0, 0, 0, 0.4);
@@ -11,133 +11,168 @@
   top: 0;
   left: 0;
   z-index: 30;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.modal__container {
-
-  position: relative;
-}
-.modal__content__block {
-
-  display: flex;
-  justify-content: center;
-
-  margin-top: 300px;
-  margin-bottom: 100px;
-  width: 1200px;
-  padding: 20px;
-  background-color: white;
-
-}
-.modal__content {
-
-
-width: 80%;
-}
-.modal__content__title {
-  margin-top: 50px;
-  margin-bottom: 50px;
-  @include font($secondary-font-family, 700, 36px, 42px, #000000)
-}
-.form__field {
-  position: relative;
-  width: 100%;
-  margin-bottom: 30px;
-  textarea {
-   padding: 70px;
+  .modal__container {
+    position: relative;
+    .modal__close {
+      position: absolute;
+      top: 300px;
+      right: -81px;
+    }
+    .modal__content__block {
+      @include flex(flex, center);
+      margin-top: 300px;
+      margin-bottom: 100px;
+      min-width: 1200px;
+      padding: 20px;
+      background-color: white;
+      .modal__content {
+        width: 80%;
+        .modal__content__title {
+          margin-top: 50px;
+          margin-bottom: 50px;
+          @include font($secondary-font-family, 700, 36px, 42px, #000000)
+        }
+      }
+    }
+    .form__submit__block {
+      padding: 20px;
+      @include flex(flex, space-around, center);
+      border: 1px solid #F2F2F2;
+      width: 100%;
+      .checkbox__block {
+        @include flex(flex, center, center);
+        gap: 20px;
+        .checkbox__icon {
+          @include flex(flex, center, center);
+          border-radius: 3px;
+          width: 25px;
+          height: 25px;
+          background-color: $accent-color;
+        }
+        .form__condition > span {
+          color: #187CD3;
+          cursor: pointer;
+        }
+      }
+    }
   }
 }
-.form__input {
-  background-color: #f2f2f2;
-  color: #242627;
-  padding: 0 28px;
-  width: 100%;
-  height: 70px;
-  border: 1px solid transparent;
-  &:focus {
-    background-color: #fff;
-  }
-}
+
 .form__field__row {
   display: flex;
   flex-direction: row;
   gap: 10px;
 }
-.input__label {
-  @include font($primary-font-family, 400, 16px, 20px, #828282);
-  position: absolute;
-  pointer-events: none;
-  left: 30px;
-  right: 15px;
-  top: 15px;
-  white-space: nowrap;
-  overflow: hidden;
-  line-height: 40px;
-  transition: .3s;
+.form__field {
+  position: relative;
+  width: 100%;
+  margin-bottom: 30px;
+
+  textarea {
+    padding: 70px;
+    overflow: hidden;
+    resize: none;
+  }
+  .form__input {
+    background-color: #f2f2f2;
+    color: #242627;
+    padding: 0 28px;
+    width: 100%;
+    height: 70px;
+    border: 1px solid transparent;
+
+    &:focus {
+      background-color: #fff;
+    }
+  }
+  .input__success__icon {
+    position: absolute;
+    top: 30px;
+    right: 30px;
+  }
+  .input__label {
+    @include font($primary-font-family, 400, 16px, 20px, #828282);
+    position: absolute;
+    pointer-events: none;
+    left: 30px;
+    right: 15px;
+    top: 15px;
+    white-space: nowrap;
+    overflow: hidden;
+    line-height: 40px;
+    transition: .3s;
+  }
+  .input__label__file {
+    position: relative;
+    padding-top: 15px;
+    width: 100%;
+    max-width: 310px;
+    height: 70px;
+    display: block;
+    text-align: center;
+    color: $interactive-element-font-color;
+    border-bottom: 1px solid #242627;
+    overflow: hidden;
+    text-overflow: ellipsis;
+
+    .uploaded {
+      color: #242627;
+      display: flex;
+      justify-content: center;
+      gap: 5px;
+    }
+  }
+  .delete__file_btn {
+    border: none;
+    outline: none;
+    background-color: transparent;
+
+  }
 }
 
-.form__input:focus~.input__label,
-.form__input:not(:focus):invalid~.input__label {
+
+
+
+
+
+
+.form__input:focus ~ .input__label,
+.form__input:not(:focus):invalid ~ .input__label {
   @include font($primary-font-family, 400, 13px, 26px, #828282);
   top: 5px;
 }
+
 .file {
   display: none;
 }
-.input__label__file {
-position: relative;
-  padding-top: 15px;
-  width: 100%;
-  max-width: 310px;
-  height: 70px;
-  display: block;
-  text-align: center;
-  color: $interactive-element-font-color;
-  border-bottom: 1px solid #242627;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  .uploaded {
-    color: #242627;
-    display: flex;
-    justify-content: center;
-    gap: 5px;
-  }
-}
-.short__row {
 
+
+
+.short__row {
   width: 70%;
 }
-.delete__file_btn {
-  border: none;
-  outline: none;
-  background-color: transparent;
 
-}
-.form__submit__block {
-  padding: 20px;
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  border: 1px solid #F2F2F2;
-  width: 100%;
-}
-.form__condition > span{
 
-  color: #187CD3;
-  cursor: pointer;
-}
+
+
+
 .form__condition > span:last-child {
   margin-left: 5px;
-}
-.modal__close {
-  position: absolute;
-  top: 300px;
-  right: -81px;
 }
 
 .form__field:hover input::placeholder {
   opacity: 1;
+}
+
+
+
+
+
+
+.input__error {
+  border: 1px solid #BF1E2E;
+}
+.input__error__text {
+  padding-left: 10px;
+  @include font($primary-font-family, 400, 11px, 14px, #BF1E2E)
 }

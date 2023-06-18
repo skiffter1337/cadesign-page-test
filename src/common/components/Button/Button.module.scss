@@ -11,10 +11,16 @@
   transition: background-color .3s ease;
   overflow: hidden;
   position: relative;
+
+  &:disabled {
+    background-color: #C3C8C8;
+  }
+
   span {
     @include font($primary-font-family, 700, 16px, 19px, $secondary-font-color);
     z-index: 5;
   }
+
   &:before {
     content: '';
     position: absolute;
@@ -22,15 +28,19 @@
     left: -100%;
     width: 200%;
     height: 100%;
-    background: linear-gradient(to right, #DC6D08 0%,#DC6D08 50%,$accent-color 50%, $accent-color 100%);
+    background: linear-gradient(to right, #DC6D08 0%, #DC6D08 50%, $accent-color 50%, $accent-color 100%);
     transition: left .3s;
-
   }
-  &:hover:before{
-    left: 0;
 
+  &:disabled:before {
+    background: #C3C8C8;
+  }
+
+  &:hover:before {
+    left: 0;
   }
 }
+
 
 
 
