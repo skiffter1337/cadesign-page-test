@@ -1,16 +1,16 @@
 {
   "files": {
-    "main.css": "/cadesign-page-test/static/css/main.78201321.css",
+    "main.css": "/cadesign-page-test/static/css/main.6fbf53e8.css",
     "main.js": "/cadesign-page-test/static/js/main.ebe19210.js",
     "static/media/background.jpg": "/cadesign-page-test/static/media/background.3ac9b7086a940292276a.jpg",
     "static/media/finy.png": "/cadesign-page-test/static/media/finy.4a921b3204e7d65a2d89.png",
     "index.html": "/cadesign-page-test/index.html",
     "static/media/input_succes.svg": "/cadesign-page-test/static/media/input_succes.105ef2f96c79b05083ec25787627a2ca.svg",
-    "main.78201321.css.map": "/cadesign-page-test/static/css/main.78201321.css.map",
+    "main.6fbf53e8.css.map": "/cadesign-page-test/static/css/main.6fbf53e8.css.map",
     "main.ebe19210.js.map": "/cadesign-page-test/static/js/main.ebe19210.js.map"
   },
   "entrypoints": [
-    "static/css/main.78201321.css",
+    "static/css/main.6fbf53e8.css",
     "static/js/main.ebe19210.js"
   ]
 }
