@@ -2,7 +2,6 @@
 @import 'src/common/styles/sass/mixins';
 
 .modal {
-  border: 2px solid red;
   @include flex(flex, center, center);
   overflow: auto;
   height: 100%;
