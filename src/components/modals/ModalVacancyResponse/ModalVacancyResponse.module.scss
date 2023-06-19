@@ -30,7 +30,6 @@
 
     .modal__content__block {
       @include flex(flex, center);
-
       width: 100%;
       padding: 20px;
       background-color: $background__color;
@@ -39,7 +38,13 @@
         .modal__content__title {
           margin-top: 50px;
           margin-bottom: 50px;
-          @include font($secondary__font__family, 700, 36px, 42px, #000000)
+          @include font($secondary__font__family, 700, 36px, 42px);
+          @media screen and (max-width: 1100px) {
+            @include font($secondary__font__family, 700, 32px, 37px);
+          }
+          @media screen and (max-width: 600px) {
+            @include font($secondary__font__family, 700, 18px, 21px);
+          }
         }
       }
     }
@@ -128,6 +133,9 @@
     overflow: hidden;
     line-height: 40px;
     transition: .3s;
+    @media screen and (max-width: 600px) {
+      @include font($primary__font__family, 400, 12px);
+    }
   }
   .input__label__file {
     position: relative;
@@ -179,8 +187,19 @@
 }
 
 
+.form__condition {
+  @include font($primary__font__family, 400, 13px, 16px);
+  @media screen and (max-width: 600px) {
+    @include font($primary__font__family, 400, 11px, 14px);
+  }
+}
+
 .form__condition > span:last-child {
+  @include font($primary__font__family, 400, 13px, 16px);
   margin-left: 5px;
+  @media screen and (max-width: 600px) {
+    @include font($primary__font__family, 400, 11px, 14px);
+  }
 }
 
 .form__field:hover input::placeholder {

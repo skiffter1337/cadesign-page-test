@@ -19,9 +19,10 @@ export const ModalVacancy: React.FC<PropsType> = ({isOpen, onClose}) => {
             <div className={s.modal__close}>
                 <Button title={'X'} callback={onCloseHandler}/>
             </div>
+                <div className={s.modal__content__block}>
             <div className={s.modal__header}>
                 <h2 className={s.modal__title}>Бухгалтер по расчету заработной платы</h2>
-                <span>от 30 000 до 60 000 руб. до вычета налогов</span>
+                <span className={s.modal__header__salary}>от 30 000 до 60 000 руб. до вычета налогов</span>
                 <div>
                 <Button title={'Откликнуться'} callback={() => {}}/>
                 </div>
@@ -61,6 +62,7 @@ export const ModalVacancy: React.FC<PropsType> = ({isOpen, onClose}) => {
                 <span className={s.vacancy__footer__title}>Вакансия добавлена 16 февраля 2020</span>
                 <Button title={'Откликнуться'} callback={() => {}}/>
             </div>
+        </div>
         </div>
         </div>
     );
