@@ -198,7 +198,7 @@
   @include font($primary__font__family, 400, 13px, 16px);
   margin-left: 5px;
   @media screen and (max-width: 600px) {
-    @include font($primary__font__family, 400, 11px, 14px);
+    @include font($primary__font__family, 400, 11px, 14yarnpx);
   }
 }
 
