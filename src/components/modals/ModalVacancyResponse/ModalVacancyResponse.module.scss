@@ -159,12 +159,6 @@
   }
 }
 
-
-
-
-
-
-
 .form__input:focus ~ .input__label,
 .form__input:not(:focus):invalid ~ .input__label {
   @include font($primary__font__family, 400, 13px, 26px, #828282);

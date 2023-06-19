@@ -5,6 +5,7 @@ import {Carousel} from "../components/Carousel/Carousel";
 import {Advantages} from "../components/Advantages/Advantages";
 import {Button} from "../common/components/Button/Button";
 import {ModalVacancy} from "../components/modals/ModalVacancy/ModalVacancy";
+import {svg} from "../svg";
 
 function App() {
 
@@ -15,6 +16,7 @@ function App() {
 
     return (
         <>
+            {svg}
             <Header/>
             <Carousel/>
             <Advantages/>

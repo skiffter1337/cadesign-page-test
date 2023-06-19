@@ -2,15 +2,14 @@
 @import 'src/common/styles/sass/mixins';
 
 .burger_icon {
-
   .btn {
     display: flex;
     background-color: transparent;
     border: none;
     z-index: 6;
     position: absolute;
-    right: 40px;
-    top: 30px;
+    top: 50px;
+    right: 30px;
   }
 }
 
